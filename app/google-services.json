@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "645111546908",
+    "project_id": "agencia-cultura-y-deportes",
+    "storage_bucket": "agencia-cultura-y-deportes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645111546908:android:329e0e2d06098b0a490bd9",
+        "android_client_info": {
+          "package_name": "com.example.agenciaculturaydeportes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645111546908-jbkk89esatbjiu0te95po6pjdciukggp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmz3Vw6iT7XP5Dt_NNeFdOUPTIjIkjtLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645111546908-jbkk89esatbjiu0te95po6pjdciukggp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
