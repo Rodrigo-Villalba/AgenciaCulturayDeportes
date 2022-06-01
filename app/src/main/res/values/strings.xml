@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">Agencia Cultura y Deportes</string>
-    <string name="title_active_login">Agencia Cultura y Deportes</string>
+    <string name="title_active_login">Agencia Municipal Cultura y Deportes</string>
     <string name="password">Contraseña</string>
     <string name="new_password">Nueva contraseña</string>
     <string name="current_password">Contraseña actual</string>
-    <string name="name">Nombre completo</string>
     <string name="email">Email</string>
+    <string name="name">Nombres y Apellido</string>
+    <string name="dni">Numero Dni</string>
+    <string name="phone">Telefono</string>
+    <string name="address">Direccion</string>
     <string name="login">Login</string>
     <string name="repeat_password">Confirma la contraseña</string>
     <string name="signup">Sign Up</string>
@@ -14,7 +17,8 @@
     <string name="all">TODO</string>
     <string name="user_email">userdefault@gmail.com</string>
     <string name="user_name">User Default</string>
-    <string name="update_profile">Guardar</string>
+    <string name="update_profile">Guardar Usuario</string>
+    <string name="edit_profile">Editar Usuario</string>
     <string name="delete_account">Eliminar cuenta</string>
     <string name="change_password">Cambiar contraseña</string>
     <string name="forget_password">¿olvidaste tu contraseña?</string>

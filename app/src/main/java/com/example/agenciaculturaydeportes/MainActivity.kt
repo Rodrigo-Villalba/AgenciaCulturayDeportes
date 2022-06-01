@@ -12,18 +12,30 @@ import com.google.firebase.ktx.Firebase
 import com.example.agenciaculturaydeportes.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.dniEditText
+import kotlinx.android.synthetic.main.activity_main.nameEditText
+import kotlinx.android.synthetic.main.activity_main.phoneEditText
+
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var auth: FirebaseAuth
+    private val db = FirebaseFirestore.getInstance()
     private val fileResult = 1
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+          //prueba
+        val bundle:Bundle? = intent.extras
+        val provider:String? = bundle?.getString("provider")
+          //fin prueba
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -32,10 +44,30 @@ class MainActivity : AppCompatActivity() {
         updateUI()
 
         binding.updateProfileAppCompatButton.setOnClickListener {
+
             val name = binding.nameEditText.text.toString()
 
             updateProfile(name)
+
+              //prueba
+
+            val email = binding.emailTextView.text.toString()
+            db.collection("users").document(email).set(
+                hashMapOf("provider" to provider,
+                "name" to nameEditText.text.toString(),
+                "dni" to dniEditText.text.toString(),
+                "phone" to phoneEditText.text.toString(),
+                "address" to addressEditText.text.toString()
+                )
+            )
+              //fin prueba
+
         }
+
+       /* binding.editProfileButton.setOnClickListener {
+            val intent:Intent = Intent(this, EditProfileActivity::class.java)
+            startActivity(intent)
+        }*/
 
         binding.profileImageView.setOnClickListener {
             fileManager()

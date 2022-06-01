@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:icon="@mipmap/ic_launcher"
@@ -12,6 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AgenciaCulturaYDeportes">
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DatosPersonaActivity"
+            android:exported="false" />
         <activity
             android:name=".UpdatePasswordActivity"
             android:exported="false" />
@@ -30,7 +37,8 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.Main" />
-        <activity android:name=".SignInActivity"
+        <activity
+            android:name=".SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
