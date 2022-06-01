@@ -143,7 +143,7 @@
                 android:hint="@string/name"
                 android:inputType="textPersonName"
                 android:maxLength="40"
-                android:padding="10dp" />
+                android:padding="8dp" />
 
             //base de datos
 
@@ -163,7 +163,7 @@
                 android:hint="@string/dni"
                 android:inputType="number"
                 android:maxLength="8"
-                android:padding="10dp" />
+                android:padding="8dp" />
 
             <EditText
                 android:id="@+id/phoneEditText"
@@ -181,7 +181,7 @@
                 android:hint="@string/phone"
                 android:inputType="number"
                 android:maxLength="10"
-                android:padding="10dp" />
+                android:padding="8dp" />
 
             <EditText
                 android:id="@+id/addressEditText"
@@ -199,7 +199,7 @@
                 android:hint="@string/address"
                 android:inputType="textPersonName"
                 android:maxLength="40"
-                android:padding="10dp" />
+                android:padding="8dp" />
             //fin base de datos
 
             <androidx.appcompat.widget.AppCompatButton
@@ -228,8 +228,8 @@
                 android:textColor="@color/white" />-->
 
             <LinearLayout
-                android:layout_width="324dp"
-                android:layout_height="46dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
