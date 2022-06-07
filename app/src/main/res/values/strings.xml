@@ -17,8 +17,11 @@
     <string name="all">TODO</string>
     <string name="user_email">userdefault@gmail.com</string>
     <string name="user_name">User Default</string>
+    <string name="user_dni">Dni Default</string>
+    <string name="user_phone">Telefono Default</string>
+    <string name="user_address">Address Default</string>
     <string name="update_profile">Guardar Usuario</string>
-    <string name="edit_profile">Editar Usuario</string>
+    <string name="siguiente">Siguiente</string>
     <string name="delete_account">Eliminar cuenta</string>
     <string name="change_password">Cambiar contraseña</string>
     <string name="forget_password">¿olvidaste tu contraseña?</string>

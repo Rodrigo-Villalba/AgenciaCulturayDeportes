@@ -2,27 +2,25 @@ package com.example.agenciaculturaydeportes
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.google.firebase.auth.ktx.auth
-import com.google.firebase.ktx.Firebase
 import com.example.agenciaculturaydeportes.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.dniEditText
-import kotlinx.android.synthetic.main.activity_main.nameEditText
-import kotlinx.android.synthetic.main.activity_main.phoneEditText
 
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
+
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var auth: FirebaseAuth
@@ -30,12 +28,14 @@ class MainActivity : AppCompatActivity() {
     private val fileResult = 1
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-          //prueba
+          //base datos
         val bundle:Bundle? = intent.extras
         val provider:String? = bundle?.getString("provider")
-          //fin prueba
+          //fin base de datos
+
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -44,14 +44,15 @@ class MainActivity : AppCompatActivity() {
         updateUI()
 
         binding.updateProfileAppCompatButton.setOnClickListener {
+            val name  = binding.nameEditText.text.toString()
+            val email = binding.emailTextView.text.toString()
 
-            val name = binding.nameEditText.text.toString()
 
             updateProfile(name)
 
-              //prueba
 
-            val email = binding.emailTextView.text.toString()
+              //base de datos
+
             db.collection("users").document(email).set(
                 hashMapOf("provider" to provider,
                 "name" to nameEditText.text.toString(),
@@ -60,14 +61,11 @@ class MainActivity : AppCompatActivity() {
                 "address" to addressEditText.text.toString()
                 )
             )
-              //fin prueba
+
+              //fin basse de datos
 
         }
 
-       /* binding.editProfileButton.setOnClickListener {
-            val intent:Intent = Intent(this, EditProfileActivity::class.java)
-            startActivity(intent)
-        }*/
 
         binding.profileImageView.setOnClickListener {
             fileManager()
@@ -95,7 +93,9 @@ class MainActivity : AppCompatActivity() {
 
         val profileUpdates = userProfileChangeRequest {
             displayName = name
+
         }
+
 
         user!!.updateProfile(profileUpdates)
             .addOnCompleteListener { task ->
@@ -107,12 +107,14 @@ class MainActivity : AppCompatActivity() {
             }
     }
 
+
     private fun fileManager() {
         val intent = Intent(Intent.ACTION_GET_CONTENT)
         intent.type = "image/*"
         startActivityForResult(intent, fileResult)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == fileResult) {
@@ -157,13 +159,13 @@ class MainActivity : AppCompatActivity() {
     private  fun updateUI () {
         val user = auth.currentUser
 
-        if (user != null){
-            binding.emailTextView.text = user.email
+            if (user != null){
+                binding.emailTextView.text = user.email
 
             if(user.displayName != null){
                 binding.nameTextView.text = user.displayName
-                binding.nameEditText.setText(user.displayName)
             }
+
 
             Glide
                 .with(this)
@@ -180,6 +182,9 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+
+
 
     private  fun signOut(){
         auth.signOut()
