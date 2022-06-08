@@ -16,6 +16,7 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_main.*
+import com.example.agenciaculturaydeportes.GerenciasActivity as GerenciasActivity
 
 
 @Suppress("DEPRECATION")
@@ -50,7 +51,6 @@ class MainActivity : AppCompatActivity() {
 
             updateProfile(name)
 
-
               //base de datos
 
             db.collection("users").document(email).set(
@@ -61,9 +61,16 @@ class MainActivity : AppCompatActivity() {
                 "address" to addressEditText.text.toString()
                 )
             )
-
               //fin basse de datos
 
+
+        }
+
+        binding.buttonSiguiente.setOnClickListener {
+            // boton siguiente
+            val gerencias = Intent(this, GerenciasActivity::class.java)
+            startActivity(gerencias)
+            //fin boton siguiente
         }
 
 
@@ -191,4 +198,5 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, SignInActivity::class.java)
         this.startActivity(intent)
     }
+
 }
