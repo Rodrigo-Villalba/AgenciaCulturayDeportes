@@ -17,9 +17,9 @@
         tools:ignore="DataExtractionRules"
         tools:targetApi="s">
 
-        <meta-data
+      <!--  <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="YOUR_API_KEY" />-->
 
         <activity
             android:name=".GerenciasActivity"
