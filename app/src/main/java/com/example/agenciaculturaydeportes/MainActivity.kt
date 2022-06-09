@@ -70,8 +70,8 @@ class MainActivity : AppCompatActivity() {
         binding.buttonSiguiente.setOnClickListener {
             val gerencias = Intent(this, GerenciasActivity::class.java)
             startActivity(gerencias)
-            //fin boton siguiente
         }
+            //fin boton siguiente
 
 
         binding.profileImageView.setOnClickListener {

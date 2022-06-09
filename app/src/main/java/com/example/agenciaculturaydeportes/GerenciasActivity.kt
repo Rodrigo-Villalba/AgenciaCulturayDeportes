@@ -1,11 +1,27 @@
 package com.example.agenciaculturaydeportes
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.agenciaculturaydeportes.databinding.ActivityGerenciasBinding
+
 
 class GerenciasActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityGerenciasBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_gerencias)
+
+
+
+        val binding = ActivityGerenciasBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        /*binding.mapaButton.setOnClickListener {
+            val mapa = Intent(this, MapaActivity::class.java)
+            startActivity(mapa)
+        }*/
+
     }
 }
