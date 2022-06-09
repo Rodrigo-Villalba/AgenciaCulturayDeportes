@@ -170,7 +170,7 @@ class MainActivity : AppCompatActivity() {
                 binding.emailTextView.text = user.email
             }
 
-            if(user.displayName != null){
+            if(user!!.displayName != null){
                 binding.nameTextView.text = user.displayName
             }
 
