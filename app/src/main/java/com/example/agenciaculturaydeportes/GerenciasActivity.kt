@@ -18,10 +18,10 @@ class GerenciasActivity : AppCompatActivity() {
         val binding = ActivityGerenciasBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        /*binding.mapaButton.setOnClickListener {
+        binding.mapaButton.setOnClickListener {
             val mapa = Intent(this, MapaActivity::class.java)
             startActivity(mapa)
-        }*/
+        }
 
     }
 }
