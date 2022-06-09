@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AgenciaCulturaYDeportes">
         <activity
+            android:name=".MapaActivity"
+            android:exported="false" />
+        <activity
             android:name=".GerenciasActivity"
             android:exported="false" />
         <activity

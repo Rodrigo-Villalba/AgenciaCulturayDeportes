@@ -22,6 +22,7 @@
     <string name="user_address">Address Default</string>
     <string name="update_profile">Guardar Usuario</string>
     <string name="siguiente">Siguiente</string>
+    <string name="mapas">Mapa</string>
     <string name="delete_account">Eliminar cuenta</string>
     <string name="change_password">Cambiar contraseña</string>
     <string name="forget_password">¿olvidaste tu contraseña?</string>

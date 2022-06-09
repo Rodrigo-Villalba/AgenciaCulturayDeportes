@@ -66,8 +66,8 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        binding.buttonSiguiente.setOnClickListener {
             // boton siguiente
+        binding.buttonSiguiente.setOnClickListener {
             val gerencias = Intent(this, GerenciasActivity::class.java)
             startActivity(gerencias)
             //fin boton siguiente
@@ -166,12 +166,14 @@ class MainActivity : AppCompatActivity() {
     private  fun updateUI () {
         val user = auth.currentUser
 
-            if (user != null){
+            if (user != null) {
                 binding.emailTextView.text = user.email
+            }
 
             if(user.displayName != null){
                 binding.nameTextView.text = user.displayName
             }
+
 
 
             Glide
@@ -188,7 +190,7 @@ class MainActivity : AppCompatActivity() {
                 .into(binding.bgProfileImageView)
         }
 
-    }
+
 
 
 

@@ -20,41 +20,56 @@
         app:srcCompat="@drawable/logoagencia"
         tools:ignore="VectorDrawableCompat" />
 
-    <TextView
+    <Button
         android:id="@+id/cultura"
         android:layout_width="270dp"
         android:layout_height="100dp"
         android:layout_marginTop="80dp"
         android:gravity="center"
         android:text="CULTURA"
+        android:background="@drawable/ic_buttom"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-    <TextView
+    <Button
         android:id="@+id/deportes"
         android:layout_width="270dp"
         android:layout_height="100dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="DEPORTES"
+        android:background="@drawable/ic_buttom"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/actividadFisica"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cultura" />
 
-    <TextView
+    <Button
         android:id="@+id/actividadFisica"
         android:layout_width="270dp"
         android:layout_height="100dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="ACTIVIDAD FISICA"
+        android:background="@drawable/ic_buttom"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/deportes" />
 
+    <Button
+        android:id="@+id/mapaButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_buttom"
+        android:text="@string/mapas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actividadFisica" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
