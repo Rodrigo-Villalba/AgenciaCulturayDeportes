@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
 
             updateProfile(name)
 
+
               //base de datos
 
             db.collection("users").document(email).set(
@@ -94,14 +95,14 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private  fun updateProfile (name : String) {
+    private  fun updateProfile (name: String) {
 
         val user = auth.currentUser
 
         val profileUpdates = userProfileChangeRequest {
             displayName = name
-
         }
+
 
 
         user!!.updateProfile(profileUpdates)
@@ -113,6 +114,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
     }
+
 
 
     private fun fileManager() {
@@ -170,7 +172,7 @@ class MainActivity : AppCompatActivity() {
                 binding.emailTextView.text = user.email
             }
 
-            if(user!!.displayName != null){
+           if(user!!.displayName != null){
                 binding.nameTextView.text = user.displayName
             }
 

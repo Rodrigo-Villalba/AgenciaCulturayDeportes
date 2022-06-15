@@ -1,8 +1,8 @@
 package com.example.agenciaculturaydeportes
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.agenciaculturaydeportes.databinding.ActivityGerenciasBinding
 
 
@@ -22,6 +22,7 @@ class GerenciasActivity : AppCompatActivity() {
             val mapa = Intent(this, MapaActivity::class.java)
             startActivity(mapa)
         }
+
 
     }
 }
