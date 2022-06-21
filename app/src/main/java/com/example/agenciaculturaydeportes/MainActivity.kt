@@ -16,7 +16,6 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_main.*
-import com.example.agenciaculturaydeportes.GerenciasActivity as GerenciasActivity
 
 
 @Suppress("DEPRECATION")
@@ -64,6 +63,9 @@ class MainActivity : AppCompatActivity() {
             )
               //fin basse de datos
 
+              //inicio buscador base de datos
+              // fin buscador base de datos
+
 
         }
 
@@ -101,6 +103,9 @@ class MainActivity : AppCompatActivity() {
 
         val profileUpdates = userProfileChangeRequest {
             displayName = name
+
+
+
         }
 
 
@@ -172,7 +177,7 @@ class MainActivity : AppCompatActivity() {
                 binding.emailTextView.text = user.email
             }
 
-           if(user!!.displayName != null){
+            if(user!!.displayName != null){
                 binding.nameTextView.text = user.displayName
             }
 

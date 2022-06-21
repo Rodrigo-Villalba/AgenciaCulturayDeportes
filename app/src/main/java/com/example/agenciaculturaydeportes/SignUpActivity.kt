@@ -77,7 +77,7 @@ class SignUpActivity : AppCompatActivity() {
                     val intent = Intent(this, CheckEmailActivity::class.java)
                     this.startActivity(intent)
                 } else {
-                    Toast.makeText(this, "No se pudo crear la cuenta. Vuelva a intertarlo",
+                    Toast.makeText(this, "No se pudo crear la cuenta. Vuelva a intertarlo email existente",
                         Toast.LENGTH_SHORT).show()
                 }
             }

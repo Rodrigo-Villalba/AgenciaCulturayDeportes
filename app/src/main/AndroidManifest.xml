@@ -16,7 +16,11 @@
         android:theme="@style/Theme.AgenciaCulturaYDeportes"
         tools:ignore="DataExtractionRules"
         tools:targetApi="s">
-
+        <activity
+            android:name=".AdministradorActivity"
+            android:exported="false"
+            android:label="@string/title_activity_administrador"
+            android:theme="@style/Theme.AgenciaCulturaYDeportes.NoActionBar" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -33,9 +37,14 @@
             android:value="YOUR_API_KEY" />
 
         <activity
-            android:name=".MapaActivity"
-            android:exported="false"
-            android:label="@string/title_activity_mapa" />
+            android:name=".ActividadFisicaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CulturaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeportesActivity"
+            android:exported="false" />
         <activity
             android:name=".GerenciasActivity"
             android:exported="false" />

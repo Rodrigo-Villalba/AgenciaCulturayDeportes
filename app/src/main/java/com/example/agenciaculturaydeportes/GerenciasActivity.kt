@@ -18,10 +18,21 @@ class GerenciasActivity : AppCompatActivity() {
         val binding = ActivityGerenciasBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.mapaButton.setOnClickListener {
-            val mapa = Intent(this, MapaActivity::class.java)
-            startActivity(mapa)
+        binding.culturaButton.setOnClickListener {
+            val cultura = Intent(this, CulturaActivity::class.java)
+            startActivity(cultura)
         }
+
+        binding.deportesButton.setOnClickListener {
+            val deportes = Intent(this, DeportesActivity::class.java)
+            startActivity(deportes)
+        }
+
+        binding.actividadFisicaButton.setOnClickListener {
+            val actividadFisica = Intent(this, ActividadFisicaActivity::class.java)
+            startActivity(actividadFisica)
+        }
+
 
 
     }

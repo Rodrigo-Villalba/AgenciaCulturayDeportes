@@ -22,7 +22,6 @@
     <string name="user_address">Address Default</string>
     <string name="update_profile">Guardar Usuario</string>
     <string name="siguiente">Siguiente</string>
-    <string name="mapas">Mapa</string>
     <string name="delete_account">Eliminar cuenta</string>
     <string name="change_password">Cambiar contraseña</string>
     <string name="forget_password">¿olvidaste tu contraseña?</string>
@@ -37,6 +36,26 @@
     <string name="title_delete_account">Eliminar cuenta</string>
     <string name="subtitle_delete_account">Por motivos de seguridad para eliminar tu cuenta por completo, debes de ingresar tu contraseña.</string>
     <string name="delete">Eliminar</string>
-    <string name="title_activity_maps">MapsActivity</string>
-    <string name="title_activity_mapa">MapaActivity</string>
+    //carga deportes
+    <string name="date">2 de marzo de 2020</string>
+    <string name="title_activity_main">Actividad</string>
+    <string name="subtitle_activity_main">2020</string>
+    <string name="title_activity_add">Nuevo Evento</string>
+    <string name="title_activity_edit">Datos del Evento</string>
+    <string name="name_form">Nombre</string>
+    <string name="date_form">Fecha</string>
+    <string name="url_form">Url imagen</string>
+    <string name="description_form">Descripción</string>
+    <string name="save">Guardar</string>
+    <string name="description">Descripcion</string>
+    <string name="title_activity_administrador">AdministradorActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    //fin carga deportes
 </resources>
