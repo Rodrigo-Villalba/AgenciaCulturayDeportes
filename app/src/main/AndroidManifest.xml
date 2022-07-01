@@ -16,8 +16,21 @@
         android:theme="@style/Theme.AgenciaCulturaYDeportes"
         tools:ignore="DataExtractionRules"
         tools:targetApi="s">
+
         <activity
-            android:name=".AdministradorActivity"
+            android:name=".EventosDetailActivity"
+            android:theme="@style/Theme.EventosDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdministradorEditActivity"
+            android:theme="@style/Theme.FormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdministradorAddActivity"
+            android:theme="@style/Theme.FormActivity" />
+            android:exported="false" />
+        <activity
+            android:name=".AdministradorMainActivity"
             android:exported="false"
             android:label="@string/title_activity_administrador"
             android:theme="@style/Theme.AgenciaCulturaYDeportes.NoActionBar" />

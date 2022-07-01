@@ -9,6 +9,7 @@
     <string name="dni">Numero Dni</string>
     <string name="phone">Telefono</string>
     <string name="address">Direccion</string>
+    <string name="check_remember">Recordarme</string>
     <string name="login">Login</string>
     <string name="repeat_password">Confirma la contraseña</string>
     <string name="signup">Sign Up</string>
@@ -39,7 +40,7 @@
     //carga deportes
     <string name="date">2 de marzo de 2020</string>
     <string name="title_activity_main">Actividad</string>
-    <string name="subtitle_activity_main">2020</string>
+    <string name="subtitle_activity_main">2023</string>
     <string name="title_activity_add">Nuevo Evento</string>
     <string name="title_activity_edit">Datos del Evento</string>
     <string name="name_form">Nombre</string>
@@ -48,13 +49,12 @@
     <string name="description_form">Descripción</string>
     <string name="save">Guardar</string>
     <string name="description">Descripcion</string>
-    <string name="title_activity_administrador">AdministradorActivity</string>
+    <string name="title_activity_administrador">Administrador Activity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     //fin carga deportes

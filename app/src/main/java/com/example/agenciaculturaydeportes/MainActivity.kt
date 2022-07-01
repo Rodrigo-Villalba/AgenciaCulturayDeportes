@@ -31,11 +31,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-          //base datos
+
+        //base datos
         val bundle:Bundle? = intent.extras
         val provider:String? = bundle?.getString("provider")
-          //fin base de datos
-
+        //fin base de datos
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -103,14 +103,9 @@ class MainActivity : AppCompatActivity() {
 
         val profileUpdates = userProfileChangeRequest {
             displayName = name
-
-
-
         }
 
-
-
-        user!!.updateProfile(profileUpdates)
+            user!!.updateProfile(profileUpdates)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Se realizaron los cambios correctamente.",
@@ -118,6 +113,8 @@ class MainActivity : AppCompatActivity() {
                     updateUI()
                 }
             }
+
+
     }
 
 
@@ -182,19 +179,18 @@ class MainActivity : AppCompatActivity() {
             }
 
 
-
             Glide
                 .with(this)
                 .load(user.photoUrl)
                 .centerCrop()
                 .placeholder(R.drawable.profile_photo)
                 .into(binding.profileImageView)
-            Glide
+            /*Glide
                 .with(this)
                 .load(user.photoUrl)
                 .centerCrop()
                 .placeholder(R.drawable.profile_photo)
-                .into(binding.bgProfileImageView)
+                .into(binding.bgProfileImageView)*/
         }
 
 
@@ -203,6 +199,13 @@ class MainActivity : AppCompatActivity() {
 
 
     private  fun signOut(){
+
+       /* val sp = getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
+        with(sp.edit()){
+            putString("active", "false")
+            apply()
+        }*/
+
         auth.signOut()
         val intent = Intent(this, SignInActivity::class.java)
         this.startActivity(intent)

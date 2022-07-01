@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdministradorActivity">
+    tools:context=".AdministradorAddActivity">
 
 
     <View
@@ -16,11 +16,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/titleAddTextView"
+        android:id="@+id/titleEditTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/title_activity_add"
+        android:text="@string/title_activity_edit"
         android:textColor="@color/white"
         android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
@@ -220,5 +220,6 @@
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

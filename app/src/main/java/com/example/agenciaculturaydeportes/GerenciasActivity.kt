@@ -19,7 +19,7 @@ class GerenciasActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.culturaButton.setOnClickListener {
-            val cultura = Intent(this, CulturaActivity::class.java)
+            val cultura = Intent(this, AdministradorMainActivity::class.java)
             startActivity(cultura)
         }
 

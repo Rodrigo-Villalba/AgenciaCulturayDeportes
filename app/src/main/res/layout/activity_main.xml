@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,53 +8,42 @@
     android:background="#dde3e7"
     tools:context=".MainActivity">
 
-    <androidx.cardview.widget.CardView
+   <!-- <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="360dp"
-        android:layout_height="148dp"
+        android:layout_height="172dp"
         app:cardCornerRadius="80dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
+        &lt;!&ndash;<ImageView
             android:id="@+id/bgProfileImageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/all"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/profile_photo" />
+            app:srcCompat="@drawable/profile_photo" />&ndash;&gt;
 
-    </androidx.cardview.widget.CardView>
-
-    <View
-        android:id="@+id/view2"
-        android:layout_width="396dp"
-        android:layout_height="393dp"
-        android:background="@drawable/ic_bg"
-        app:layout_constraintBottom_toBottomOf="@+id/cardView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>-->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="269dp"
+            android:layout_marginTop="30dp"
             android:orientation="vertical">
 
             <ImageView
@@ -61,9 +51,8 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_gravity="end"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="12dp"
-                android:layout_marginRight="16dp"
                 android:contentDescription="@string/all"
                 app:srcCompat="@drawable/ic_sign_out"
                 tools:ignore="VectorDrawableCompat" />
@@ -72,18 +61,18 @@
                 android:id="@+id/nameTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="80dp"
                 android:gravity="center"
                 android:text="@string/user_name"
                 android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/emailTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="5dp"
                 android:gravity="center"
                 android:text="@string/user_email"
                 android:textSize="16sp" />
@@ -118,6 +107,12 @@
                 android:text="@string/user_address"
                 android:textSize="16sp" />
 
+            <!--<View
+                android:id="@+id/view2"
+                android:layout_width="396dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_bg" />-->
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -125,8 +120,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="120dp"
         android:layout_height="120dp"
+        android:layout_marginTop="15dp"
         app:cardCornerRadius="80dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardView">
@@ -141,11 +136,11 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -236,7 +231,7 @@
                 android:layout_width="190dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/ic_buttom"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"

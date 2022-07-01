@@ -80,11 +80,28 @@
             android:inputType="textPassword"
             android:padding="16dp" />
 
+        <CheckBox
+            android:id="@+id/checkBoxRemember"
+            style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="26sp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="24dp"
+            android:layout_gravity="start"
+            android:text="@string/check_remember"
+            android:textSize="16sp"
+            android:textColor="#616060"
+            app:buttonTint="#616060" />
+
+
         <TextView
             android:id="@+id/recoveryAccountTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="32dp"
             android:layout_marginStart="24dp"
             android:textSize="16sp"
@@ -92,6 +109,8 @@
             android:gravity="end"
             android:layout_marginRight="32dp"
             android:layout_marginLeft="24dp" />
+
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/signInAppCompatButton"
@@ -102,7 +121,9 @@
             android:paddingLeft="64dp"
             android:paddingRight="64dp"
             android:text="@string/login"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            android:onClick="loguearCheckbox"/>
+
     </LinearLayout>
 
     <LinearLayout

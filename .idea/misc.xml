@@ -6,24 +6,33 @@
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/drawable/ic_btn.xml" value="0.141" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/drawable/ic_buttom.xml" value="0.2005" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/drawable/ic_email.xml" value="0.1" />
+        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/drawable/ic_field.xml" value="0.1625" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/drawable/ic_logo.xml" value="0.1" />
+        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/drawable/ic_menu.xml" value="0.1625" />
+        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/drawable/ic_plus.xml" value="0.1625" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_account_recovery.xml" value="0.1" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_actividad_fisica.xml" value="0.14010416666666667" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_administrador.xml" value="0.18070652173913043" />
+        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_administrador_add.xml" value="0.1933876811594203" />
+        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_administrador_edit.xml" value="0.1933876811594203" />
+        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_administrador_main.xml" value="0.14010416666666667" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_check_email.xml" value="0.1" />
-        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_cultura.xml" value="0.14010416666666667" />
+        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_cultura.xml" value="0.16" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_datos_persona.xml" value="0.12" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_delete_account.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_deportes.xml" value="0.25" />
+        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_deportes.xml" value="0.33" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_edit_profile.xml" value="0.2" />
+        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_eventos.xml" value="0.1933876811594203" />
+        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_eventos_detail.xml" value="0.1933876811594203" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_gerencias.xml" value="0.25" />
-        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_mapa.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_maps.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_sign_in.xml" value="0.1" />
+        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_sign_in.xml" value="0.22" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/activity_update_password.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/content_administrador.xml" value="0.18070652173913043" />
+        <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/evento_content.xml" value="0.1933876811594203" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/fragment_first.xml" value="0.18070652173913043" />
         <entry key="..\:/Users/Rodrigo Villalba/AndroidStudioProjects/AgenciaCulturayDeportes/app/src/main/res/layout/fragment_second.xml" value="0.18070652173913043" />
       </map>
