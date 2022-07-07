@@ -71,8 +71,8 @@ class MainActivity : AppCompatActivity() {
 
             // boton siguiente
         binding.buttonSiguiente.setOnClickListener {
-            val gerencias = Intent(this, GerenciasActivity::class.java)
-            startActivity(gerencias)
+            val administrador = Intent(this, AdministradorMainActivity::class.java)
+            startActivity(administrador)
         }
             //fin boton siguiente
 

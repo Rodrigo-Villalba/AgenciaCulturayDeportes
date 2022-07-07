@@ -42,7 +42,7 @@ class AdministradorEditActivity : AppCompatActivity() {
             }
         })
 
-        saveButton.setOnClickListener { v ->
+        saveButton.setOnClickListener {
 
             val name : String = nameEditText.text.toString()
             val date : String = dateEditText.text.toString()

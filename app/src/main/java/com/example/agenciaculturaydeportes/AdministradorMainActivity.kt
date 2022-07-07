@@ -27,7 +27,7 @@ class AdministradorMainActivity : AppCompatActivity() {
 
     private val database = Firebase.database
     private lateinit var messagesListener: ValueEventListener
-    private val listEventos:MutableList<Evento> = ArrayList()
+    private val listEventoActivities:MutableList<Evento> = ArrayList()
     val myRef = database.getReference("evento")
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +39,7 @@ class AdministradorMainActivity : AppCompatActivity() {
             v.context.startActivity(intent)
         }
 
-        listEventos.clear()
+        listEventoActivities.clear()
         setupRecyclerView(eventoRecyclerView)
 
     }
@@ -49,17 +49,17 @@ class AdministradorMainActivity : AppCompatActivity() {
         messagesListener = object : ValueEventListener {
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
-                listEventos.clear()
+                listEventoActivities.clear()
                 dataSnapshot.children.forEach { child ->
-                    val videogame: Evento? =
+                    val evento: Evento? =
                         Evento(child.child("name").getValue<String>(),
                                child.child("date").getValue<String>(),
                                child.child("description").getValue<String>(),
                                child.child("url").getValue<String>(),
                                child.key)
-                    videogame?.let { listEventos.add(it) }
+                    evento?.let { listEventoActivities.add(it) }
                 }
-                recyclerView.adapter = VideogameViewAdapter(listEventos)
+                recyclerView.adapter = EventoViewAdapter(listEventoActivities)
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -71,8 +71,8 @@ class AdministradorMainActivity : AppCompatActivity() {
         deleteSwipe(recyclerView)
     }
 
-    class VideogameViewAdapter(private val values: List<Evento>) :
-        RecyclerView.Adapter<VideogameViewAdapter.ViewHolder>() {
+    class EventoViewAdapter(private val values: List<Evento>) :
+        RecyclerView.Adapter<EventoViewAdapter.ViewHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
             val view = LayoutInflater.from(parent.context)
@@ -81,25 +81,25 @@ class AdministradorMainActivity : AppCompatActivity() {
         }
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            val videogame = values[position]
-            holder.mNameTextView.text = videogame.name
-            holder.mDateTextView.text = videogame.date
+            val evento = values[position]
+            holder.mNameTextView.text = evento.name
+            holder.mDateTextView.text = evento.date
             holder.mPosterImgeView?.let {
                 Glide.with(holder.itemView.context)
-                    .load(videogame.url)
+                    .load(evento.url)
                     .into(it)
             }
 
             holder.itemView.setOnClickListener { v ->
                 val intent = Intent(v.context, EventosDetailActivity::class.java).apply {
-                    putExtra("key", videogame.key)
+                    putExtra("key", evento.key)
                 }
                 v.context.startActivity(intent)
             }
 
             holder.itemView.setOnLongClickListener{ v ->
                 val intent = Intent(v.context, AdministradorEditActivity::class.java).apply {
-                    putExtra("key", videogame.key)
+                    putExtra("key", evento.key)
                 }
                 v.context.startActivity(intent)
                 true
@@ -123,8 +123,8 @@ class AdministradorMainActivity : AppCompatActivity() {
             }
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                listEventos.get(viewHolder.adapterPosition).key?.let { myRef.child(it).setValue(null) }
-                listEventos.removeAt(viewHolder.adapterPosition)
+                listEventoActivities[viewHolder.adapterPosition].key?.let { myRef.child(it).setValue(null) }
+                listEventoActivities.removeAt(viewHolder.adapterPosition)
                 recyclerView.adapter?.notifyItemRemoved(viewHolder.adapterPosition)
                 recyclerView.adapter?.notifyDataSetChanged()
             }
