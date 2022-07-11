@@ -4,7 +4,7 @@
     <string name="password">Contraseña</string>
     <string name="new_password">Nueva contraseña</string>
     <string name="current_password">Contraseña actual</string>
-    <string name="email">Email</string>
+    <string name="email">E-mail</string>
     <string name="name">Nombres y Apellido</string>
     <string name="dni">Numero Dni</string>
     <string name="phone">Telefono</string>
