@@ -69,12 +69,17 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-            // boton siguiente
+            // boton siguiente y Eventos
         binding.buttonSiguiente.setOnClickListener {
             val administrador = Intent(this, AdministradorMainActivity::class.java)
             startActivity(administrador)
         }
-            //fin boton siguiente
+
+        binding.buttonEventos.setOnClickListener {
+            val eventosPantalla = Intent(this, PantallaEventosActivity::class.java)
+            startActivity(eventosPantalla)
+        }
+            //fin boton siguiente y Eventos
 
 
         binding.profileImageView.setOnClickListener {

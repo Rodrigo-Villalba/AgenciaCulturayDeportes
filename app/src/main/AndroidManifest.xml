@@ -17,19 +17,20 @@
         android:theme="@style/Theme.AgenciaCulturaYDeportes"
         tools:ignore="DataExtractionRules,ExtraText"
         tools:targetApi="s">
-
+        <activity
+            android:name=".PantallaEventosActivity"
+            android:exported="false" />
         <activity
             android:name=".EventosDetailActivity"
-            android:theme="@style/Theme.EventosDetailActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.EventosDetailActivity" />
         <activity
             android:name=".AdministradorEditActivity"
-            android:theme="@style/Theme.FormActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.FormActivity" />
         <activity
             android:name=".AdministradorAddActivity"
             android:theme="@style/Theme.FormActivity" />
-        android:exported="false" />
         <activity
             android:name=".AdministradorMainActivity"
             android:exported="false"
@@ -47,7 +48,6 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="YOUR_API_KEY" />
 
-        
         <activity
             android:name=".UpdatePasswordActivity"
             android:exported="false" />

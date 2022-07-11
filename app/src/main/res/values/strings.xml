@@ -22,7 +22,8 @@
     <string name="user_phone">Telefono Default</string>
     <string name="user_address">Address Default</string>
     <string name="update_profile">Guardar Usuario</string>
-    <string name="siguiente">Administrador</string>
+    <string name="siguiente">Admin</string>
+    <string name="boton_eventos">Eventos</string>
     <string name="delete_account">Eliminar cuenta</string>
     <string name="change_password">Cambiar contraseña</string>
     <string name="forget_password">¿olvidaste tu contraseña?</string>
@@ -39,6 +40,7 @@
     <string name="delete">Eliminar</string>
     //carga deportes
     <string name="date">2 de marzo de 2020</string>
+    <string name="evento_name">Nombre Evento</string>
     <string name="title_activity_main">Actividades</string>
     <string name="subtitle_activity_main">2023</string>
     <string name="title_activity_add">Nuevo Evento</string>
@@ -46,7 +48,9 @@
     <string name="name_form">Nombre</string>
     <string name="date_form">Fecha</string>
     <string name="url_form">Url imagen</string>
+    <string name="foto_form">Cargar Imagen</string>
     <string name="description_form">Descripción</string>
+    <string name="save_foto">Subir foto</string>
     <string name="save">Guardar</string>
     <string name="description">Descripcion</string>
     <string name="title_activity_administrador">Administrador Activity</string>

@@ -52,7 +52,7 @@ class AdministradorEditActivity : AppCompatActivity() {
             myRef.child("name").setValue(name)
             myRef.child("date").setValue(date)
             myRef.child("description").setValue(description)
-            myRef.child("url").setValue(url)
+            myRef.child("link").setValue(url)
 
             finish()
         }

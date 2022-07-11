@@ -38,11 +38,13 @@
         app:layout_constraintBottom_toBottomOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="269dp"
+            android:layout_height="340dp"
             android:layout_marginTop="30dp"
             android:orientation="vertical">
 
@@ -61,7 +63,7 @@
                 android:id="@+id/nameTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="85dp"
                 android:gravity="center"
                 android:text="@string/user_name"
                 android:textColor="@color/black"
@@ -71,41 +73,41 @@
                 android:id="@+id/emailTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
                 android:gravity="center"
                 android:text="@string/user_email"
-                android:textSize="16sp" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/dniTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="1dp"
                 android:gravity="center"
                 android:text="@string/user_dni"
-                android:textSize="16sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/phoneTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="1dp"
                 android:gravity="center"
                 android:text="@string/user_phone"
-                android:textSize="16sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/addressTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="1dp"
                 android:gravity="center"
                 android:text="@string/user_address"
-                android:textSize="16sp" />
+                android:textSize="20sp" />
 
             <!--<View
                 android:id="@+id/view2"
@@ -135,29 +137,30 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="10dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" >
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="301dp"
             android:orientation="vertical">
 
             <EditText
                 android:id="@+id/nameEditText"
                 android:layout_width="match_parent"
-                android:layout_height="39dp"
+                android:layout_height="30dp"
                 android:layout_marginLeft="24dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginRight="24dp"
                 android:autofillHints="@string/name"
                 android:background="@drawable/ic_field"
@@ -168,15 +171,16 @@
                 android:hint="@string/name"
                 android:inputType="textPersonName"
                 android:maxLength="40"
-                android:padding="8dp" />
+                android:padding="5dp"
+                android:textSize="15sp" />
 
 
-           <EditText
+            <EditText
                 android:id="@+id/dniEditText"
                 android:layout_width="match_parent"
-                android:layout_height="39dp"
+                android:layout_height="30dp"
                 android:layout_marginLeft="24dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginRight="24dp"
                 android:autofillHints="@string/dni"
                 android:background="@drawable/ic_field"
@@ -187,14 +191,15 @@
                 android:hint="@string/dni"
                 android:inputType="number"
                 android:maxLength="8"
-                android:padding="8dp" />
+                android:padding="5dp"
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/phoneEditText"
                 android:layout_width="match_parent"
-                android:layout_height="39dp"
+                android:layout_height="30dp"
                 android:layout_marginLeft="24dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginRight="24dp"
                 android:autofillHints="@string/phone"
                 android:background="@drawable/ic_field"
@@ -205,14 +210,15 @@
                 android:hint="@string/phone"
                 android:inputType="number"
                 android:maxLength="10"
-                android:padding="8dp" />
+                android:padding="5dp"
+                android:textSize="15sp" />
 
             <EditText
                 android:id="@+id/addressEditText"
                 android:layout_width="match_parent"
-                android:layout_height="39dp"
+                android:layout_height="30dp"
                 android:layout_marginLeft="24dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginRight="24dp"
                 android:autofillHints="@string/address"
                 android:background="@drawable/ic_field"
@@ -223,38 +229,55 @@
                 android:hint="@string/address"
                 android:inputType="textPersonName"
                 android:maxLength="40"
-                android:padding="8dp" />
+                android:padding="5dp"
+                android:textSize="15sp" />
 
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/updateProfileAppCompatButton"
                 android:layout_width="190dp"
-                android:layout_height="40dp"
+                android:layout_height="25dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:background="@drawable/ic_buttom"
+                android:padding="0dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:text="@string/update_profile"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="10sp" />
 
             <Button
                 android:id="@+id/buttonSiguiente"
-                android:layout_width="190dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/ic_buttom"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
+                android:padding="0dp"
                 android:text="@string/siguiente"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/buttonEventos"
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="-24dp"
+                android:background="@drawable/ic_buttom"
+                android:padding="0dp"
+                android:text="@string/boton_eventos"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="20dp"
                 android:layout_marginBottom="16dp"
                 android:orientation="horizontal">
@@ -280,4 +303,30 @@
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="Editar Perfil"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="Perfil"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20sp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
