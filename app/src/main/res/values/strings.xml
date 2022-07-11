@@ -41,7 +41,7 @@
     //carga deportes
     <string name="date">2 de marzo de 2020</string>
     <string name="evento_name">Nombre Evento</string>
-    <string name="title_activity_main">Actividades</string>
+    <string name="title_activity_main">Actividades y Descuentos</string>
     <string name="subtitle_activity_main">2023</string>
     <string name="title_activity_add">Nuevo Evento</string>
     <string name="title_activity_edit">Datos del Evento</string>
