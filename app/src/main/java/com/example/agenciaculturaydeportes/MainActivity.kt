@@ -18,6 +18,7 @@ import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_main.*
 
 
+
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private val db = FirebaseFirestore.getInstance()
     private val fileResult = 1
+
 
 
 
@@ -46,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         binding.updateProfileAppCompatButton.setOnClickListener {
             val name  = binding.nameEditText.text.toString()
             val email = binding.emailTextView.text.toString()
+
 
 
             updateProfile(name)
@@ -180,8 +183,21 @@ class MainActivity : AppCompatActivity() {
             }
 
             if(user!!.displayName != null){
-                binding.nameTextView.text = user.displayName
+                binding.nameTextView.text = "Usuario: "+user.displayName
             }
+
+            if(user.displayName != null){
+                binding.dniTextView.text = " dni: "+ dniEditText.text
+            }
+
+            if(user.displayName != null){
+                binding.phoneTextView.text = "telefono: "+ phoneEditText.text
+            }
+
+            if(user.displayName != null){
+                binding.addressTextView.text = "Direccion: "+ addressEditText.text
+            }
+
 
 
             Glide
@@ -190,30 +206,18 @@ class MainActivity : AppCompatActivity() {
                 .centerCrop()
                 .placeholder(R.drawable.profile_photo)
                 .into(binding.profileImageView)
-            /*Glide
-                .with(this)
-                .load(user.photoUrl)
-                .centerCrop()
-                .placeholder(R.drawable.profile_photo)
-                .into(binding.bgProfileImageView)*/
+
         }
-
-
-
-
 
 
     private  fun signOut(){
 
-       /* val sp = getSharedPreferences("my_prefs", Context.MODE_PRIVATE)
-        with(sp.edit()){
-            putString("active", "false")
-            apply()
-        }*/
-
         auth.signOut()
+
         val intent = Intent(this, SignInActivity::class.java)
         this.startActivity(intent)
     }
 
 }
+
+

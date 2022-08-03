@@ -18,6 +18,9 @@
         tools:ignore="DataExtractionRules,ExtraText"
         tools:targetApi="s">
         <activity
+            android:name=".FormulariosActivity"
+            android:exported="false" />
+        <activity
             android:name=".PantallaEventosActivity"
             android:exported="false" />
         <activity

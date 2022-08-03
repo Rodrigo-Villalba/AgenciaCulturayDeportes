@@ -56,6 +56,7 @@ class AdministradorMainActivity : AppCompatActivity() {
                                child.child("date").getValue<String>(),
                                child.child("description").getValue<String>(),
                                child.child("url").getValue<String>(),
+                               //child.child("link").getValue<String>(),
                                child.key)
                     evento?.let { listEventoActivities.add(it) }
                 }
@@ -71,7 +72,7 @@ class AdministradorMainActivity : AppCompatActivity() {
         deleteSwipe(recyclerView)
     }
 
-    class EventoViewAdapter(private val values: List<Evento>) :
+    class EventoViewAdapter(private val values: List<Evento> ) :
         RecyclerView.Adapter<EventoViewAdapter.ViewHolder>() {
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -82,12 +83,18 @@ class AdministradorMainActivity : AppCompatActivity() {
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val evento = values[position]
+
             holder.mNameTextView.text = evento.name
             holder.mDateTextView.text = evento.date
             holder.mPosterImgeView?.let {
-                Glide.with(holder.itemView.context)
+
+                Glide
+                    .with(holder.itemView.context)
                     .load(evento.url)
+                    .placeholder(R.drawable.logoagencia)
                     .into(it)
+
+
             }
 
             holder.itemView.setOnClickListener { v ->
@@ -97,7 +104,7 @@ class AdministradorMainActivity : AppCompatActivity() {
                 v.context.startActivity(intent)
             }
 
-            holder.itemView.setOnLongClickListener{ v ->
+            holder.itemView.setOnLongClickListener { v ->
                 val intent = Intent(v.context, AdministradorEditActivity::class.java).apply {
                     putExtra("key", evento.key)
                 }
@@ -113,6 +120,7 @@ class AdministradorMainActivity : AppCompatActivity() {
             val mNameTextView: TextView = view.nameTextView
             val mDateTextView: TextView = view.dateTextView
             val mPosterImgeView: ImageView? = view.posterImgeView
+
         }
     }
 

@@ -52,7 +52,8 @@ class PantallaEventosActivity : AppCompatActivity() {
                             child.child("date").getValue<String>(),
                             child.child("description").getValue<String>(),
                             child.child("url").getValue<String>(),
-                            child.key)
+                            child.key
+                            )
                     evento?.let { listEventoActivities.add(it) }
                 }
                 recyclerView.adapter = EventoViewAdapter(listEventoActivities)

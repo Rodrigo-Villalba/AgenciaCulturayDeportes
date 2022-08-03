@@ -18,6 +18,7 @@ class AdministradorEditActivity : AppCompatActivity() {
         setContentView(R.layout.activity_administrador_edit)
 
 
+
         val key = intent.getStringExtra("key")
         val database = Firebase.database
         @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS") val myRef = database.getReference("evento").child(
@@ -33,6 +34,7 @@ class AdministradorEditActivity : AppCompatActivity() {
                     dateEditText.text = Editable.Factory.getInstance().newEditable(evento.date)
                     descriptionEditText.text = Editable.Factory.getInstance().newEditable(evento.description)
                     urlEditText.text = Editable.Factory.getInstance().newEditable(evento.url)
+                    //uploadImageView.text = Editable.Factory.getInstance().newEditable(evento.link)
                 }
 
             }
@@ -47,12 +49,14 @@ class AdministradorEditActivity : AppCompatActivity() {
             val name : String = nameEditText.text.toString()
             val date : String = dateEditText.text.toString()
             val description: String = descriptionEditText.text.toString()
-            val url: String = urlEditText.text.toString()
+            val url: String = urlEditText.toString()
+            //val link: String = uploadImageView.toString()
 
             myRef.child("name").setValue(name)
             myRef.child("date").setValue(date)
             myRef.child("description").setValue(description)
-            myRef.child("link").setValue(url)
+            myRef.child("url").setValue(url)
+           //myRef.child("link").setValue(link)
 
             finish()
         }

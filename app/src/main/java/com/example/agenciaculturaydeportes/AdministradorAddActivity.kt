@@ -12,6 +12,7 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_administrador_add.*
+import kotlinx.android.synthetic.main.activity_administrador_add.view.*
 
 
 class AdministradorAddActivity : AppCompatActivity() {
@@ -22,6 +23,7 @@ class AdministradorAddActivity : AppCompatActivity() {
     private val myRef = database.getReference("evento")
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_administrador_add)
@@ -30,24 +32,25 @@ class AdministradorAddActivity : AppCompatActivity() {
         val name = nameEditText.text
         val date = dateEditText.text
         val description = descriptionEditText.text
-        val url = urlEditText.text
+        val url = uploadImageView.urlTextView
 
 
         uploadImageView.setOnClickListener {
-            fileManager()
-        }
+                fileManager()
+            }
 
 
         saveButton.setOnClickListener {
-            val evento = Evento(
-                name.toString(),
-                date.toString(),
-                description.toString(),
-                url.toString()
-            )
-            myRef.child(myRef.push().key.toString()).setValue(evento)
-            finish()
+
+             val evento = Evento(name.toString(), date.toString(), description.toString(), url.toString())
+
+             myRef.child(myRef.push().key.toString()).setValue(evento)
+
+
+             finish()
         }//cierra el saveButton
+
+
 
     }//cierra el onCreate
 
@@ -87,23 +90,25 @@ class AdministradorAddActivity : AppCompatActivity() {
 
 
     private fun fileUpload(mUri: Uri) {
-        val folder: StorageReference = FirebaseStorage.getInstance().reference.child("Imagen_Evento")
+        val folder: StorageReference = FirebaseStorage.getInstance().reference.child("Evento_Imagenes")
         val path =mUri.lastPathSegment.toString()
         val fileName: StorageReference = folder.child(path.substring(path.lastIndexOf('/')+1))
 
         fileName.putFile(mUri).addOnSuccessListener {
-            fileName.downloadUrl.addOnSuccessListener { uri ->
-                val hashMap = HashMap<String, String>()
-                hashMap["link"] = java.lang.String.valueOf(uri)
+            fileName.downloadUrl.addOnSuccessListener {
+                val evento= HashMap<String, String>()
 
-                myRef.child(myRef.push().key.toString()).setValue(hashMap)
+               evento["url"] = java.lang.String.valueOf(mUri)
 
                 Log.i("message", "file upload successfully")
             }
         }.addOnFailureListener {
             Log.i("message", "file upload error")
         }
+
+
     }//Cierra el fileUpload
+
 
 
 }//cierra el AdministradorAddActivity
