@@ -21,6 +21,9 @@
     <string name="user_dni">Dni Default</string>
     <string name="user_phone">Telefono Default</string>
     <string name="user_address">Address Default</string>
+    <string name="deporte">Deporte</string>
+    <string name="centro_deportivo">Centro Deportivo</string>
+    <string name="evento">Evento</string>
     <string name="update_profile">Guardar Usuario</string>
     <string name="siguiente">Admin</string>
     <string name="boton_eventos">Eventos</string>
